@@ -1,4 +1,4 @@
-name: root@apolinario
+name: programmingwithkumaresan
 
 on:
   workflow_dispatch:
@@ -7,7 +7,6 @@ jobs:
   build:
     name: Start Building...
     runs-on: windows-latest
-
     steps:
       - name: Downloading & Installing Essentials
         run: |
@@ -17,8 +16,5 @@ jobs:
       - name: Log In To AnyDesk
         run: cmd /c show.bat
 
-      - name: Run Python Script
+      - name: Time Counter
         run: python time.py
-
-      - name: Keep Workflow Active for 5h30
-        run: powershell -Command "Start-Sleep -Seconds 19800"
